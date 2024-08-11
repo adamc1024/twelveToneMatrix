@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 2.5;
+  background-color: #efefef;
+  color: #4f4f4f;
+}
+h1 {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(14, 1fr);
+  width: 600px;
+  height: 600px;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  gap: 1px;
+}
+.grid-cell,
+.grid-cell-btn {
+  line-height: 40px;
+  vertical-align: middle;
+  background-color: #e0e0e0;
+  text-align: center;
+  border: solid 0.5px #4f4f4f;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+}
+.grid-cell-btn:hover {
+  cursor: pointer;
+}
+.grid-cell-btn:active {
+  background-color: #c0c0c0;
+}
+.create-matrix,
+.modify-matrix {
+  text-align: center;
+}
+.btn-new-matrix {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding: 16px 64px;
+  width: 240px;
+  cursor: pointer;
+  color: #4f4f4f;
+  margin-right: 20px;
+}
+.btn-clear {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  color: #4f4f4f;
+}
+.btn-all-flats,
+.btn-all-sharps,
+.btn-random {
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 16px 0;
+  width: 200px;
+  cursor: pointer;
+  color: #4f4f4f;
+}
+.blank {
+  background-color: inherit;
+}

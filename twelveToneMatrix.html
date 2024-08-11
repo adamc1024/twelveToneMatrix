@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Twelve Tone Matrix</title>
+    <link rel="stylesheet" href="twelveToneMatrix.css" />
+  </head>
+  <body>
+    <h1>Twelve Tone Matrix Generator</h1>
+    <div class="create-matrix">
+      <button class="btn-new-matrix">New Matrix</button>
+      <button class="btn-clear">Clear</button>
+    </div>
+    <div class="modify-matrix">
+      <button class="btn-all-flats">All Flats</button>
+      <button class="btn-all-sharps">All Sharps</button>
+      <button class="btn-random">Random</button>
+    </div>
+    <div class="grid">
+      <!-- 14 x 14 Grid -->
+      <!-- Row 0 -->
+      <div class="blank"></div>
+      <div class="grid-cell-btn i-label" id="in0"></div>
+      <div class="grid-cell-btn i-label" id="in1"></div>
+      <div class="grid-cell-btn i-label" id="in2"></div>
+      <div class="grid-cell-btn i-label" id="in3"></div>
+      <div class="grid-cell-btn i-label" id="in4"></div>
+      <div class="grid-cell-btn i-label" id="in5"></div>
+      <div class="grid-cell-btn i-label" id="in6"></div>
+      <div class="grid-cell-btn i-label" id="in7"></div>
+      <div class="grid-cell-btn i-label" id="in8"></div>
+      <div class="grid-cell-btn i-label" id="in9"></div>
+      <div class="grid-cell-btn i-label" id="in10"></div>
+      <div class="grid-cell-btn i-label" id="in11"></div>
+      <div class="blank"></div>
+      <!-- Row 1 -->
+      <div class="grid-cell-btn p-label" id="pr0"></div>
+      <div class="grid-cell note row-0 col-0"></div>
+      <div class="grid-cell note row-0 col-1"></div>
+      <div class="grid-cell note row-0 col-2"></div>
+      <div class="grid-cell note row-0 col-3"></div>
+      <div class="grid-cell note row-0 col-4"></div>
+      <div class="grid-cell note row-0 col-5"></div>
+      <div class="grid-cell note row-0 col-6"></div>
+      <div class="grid-cell note row-0 col-7"></div>
+      <div class="grid-cell note row-0 col-8"></div>
+      <div class="grid-cell note row-0 col-9"></div>
+      <div class="grid-cell note row-0 col-10"></div>
+      <div class="grid-cell note row-0 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re0"></div>
+      <!-- Row 2 -->
+      <div class="grid-cell-btn p-label" id="pr1"></div>
+      <div class="grid-cell note row-1 col-0"></div>
+      <div class="grid-cell note row-1 col-1"></div>
+      <div class="grid-cell note row-1 col-2"></div>
+      <div class="grid-cell note row-1 col-3"></div>
+      <div class="grid-cell note row-1 col-4"></div>
+      <div class="grid-cell note row-1 col-5"></div>
+      <div class="grid-cell note row-1 col-6"></div>
+      <div class="grid-cell note row-1 col-7"></div>
+      <div class="grid-cell note row-1 col-8"></div>
+      <div class="grid-cell note row-1 col-9"></div>
+      <div class="grid-cell note row-1 col-10"></div>
+      <div class="grid-cell note row-1 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re1"></div>
+      <!-- Row 3 -->
+      <div class="grid-cell-btn p-label" id="pr2"></div>
+      <div class="grid-cell note row-2 col-0"></div>
+      <div class="grid-cell note row-2 col-1"></div>
+      <div class="grid-cell note row-2 col-2"></div>
+      <div class="grid-cell note row-2 col-3"></div>
+      <div class="grid-cell note row-2 col-4"></div>
+      <div class="grid-cell note row-2 col-5"></div>
+      <div class="grid-cell note row-2 col-6"></div>
+      <div class="grid-cell note row-2 col-7"></div>
+      <div class="grid-cell note row-2 col-8"></div>
+      <div class="grid-cell note row-2 col-9"></div>
+      <div class="grid-cell note row-2 col-10"></div>
+      <div class="grid-cell note row-2 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re2"></div>
+      <!-- Row 4 -->
+      <div class="grid-cell-btn p-label" id="pr3"></div>
+      <div class="grid-cell note row-3 col-0"></div>
+      <div class="grid-cell note row-3 col-1"></div>
+      <div class="grid-cell note row-3 col-2"></div>
+      <div class="grid-cell note row-3 col-3"></div>
+      <div class="grid-cell note row-3 col-4"></div>
+      <div class="grid-cell note row-3 col-5"></div>
+      <div class="grid-cell note row-3 col-6"></div>
+      <div class="grid-cell note row-3 col-7"></div>
+      <div class="grid-cell note row-3 col-8"></div>
+      <div class="grid-cell note row-3 col-9"></div>
+      <div class="grid-cell note row-3 col-10"></div>
+      <div class="grid-cell note row-3 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re3"></div>
+      <!-- Row 5 -->
+      <div class="grid-cell-btn p-label" id="pr4"></div>
+      <div class="grid-cell note row-4 col-0"></div>
+      <div class="grid-cell note row-4 col-1"></div>
+      <div class="grid-cell note row-4 col-2"></div>
+      <div class="grid-cell note row-4 col-3"></div>
+      <div class="grid-cell note row-4 col-4"></div>
+      <div class="grid-cell note row-4 col-5"></div>
+      <div class="grid-cell note row-4 col-6"></div>
+      <div class="grid-cell note row-4 col-7"></div>
+      <div class="grid-cell note row-4 col-8"></div>
+      <div class="grid-cell note row-4 col-9"></div>
+      <div class="grid-cell note row-4 col-10"></div>
+      <div class="grid-cell note row-4 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re4"></div>
+      <!-- Row 6 -->
+      <div class="grid-cell-btn p-label" id="pr5"></div>
+      <div class="grid-cell note row-5 col-0"></div>
+      <div class="grid-cell note row-5 col-1"></div>
+      <div class="grid-cell note row-5 col-2"></div>
+      <div class="grid-cell note row-5 col-3"></div>
+      <div class="grid-cell note row-5 col-4"></div>
+      <div class="grid-cell note row-5 col-5"></div>
+      <div class="grid-cell note row-5 col-6"></div>
+      <div class="grid-cell note row-5 col-7"></div>
+      <div class="grid-cell note row-5 col-8"></div>
+      <div class="grid-cell note row-5 col-9"></div>
+      <div class="grid-cell note row-5 col-10"></div>
+      <div class="grid-cell note row-5 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re5"></div>
+      <!-- Row 7 -->
+      <div class="grid-cell-btn p-label" id="pr6"></div>
+      <div class="grid-cell note row-6 col-0"></div>
+      <div class="grid-cell note row-6 col-1"></div>
+      <div class="grid-cell note row-6 col-2"></div>
+      <div class="grid-cell note row-6 col-3"></div>
+      <div class="grid-cell note row-6 col-4"></div>
+      <div class="grid-cell note row-6 col-5"></div>
+      <div class="grid-cell note row-6 col-6"></div>
+      <div class="grid-cell note row-6 col-7"></div>
+      <div class="grid-cell note row-6 col-8"></div>
+      <div class="grid-cell note row-6 col-9"></div>
+      <div class="grid-cell note row-6 col-10"></div>
+      <div class="grid-cell note row-6 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re6"></div>
+      <!-- Row 8 -->
+      <div class="grid-cell-btn p-label" id="pr7"></div>
+      <div class="grid-cell note row-7 col-0"></div>
+      <div class="grid-cell note row-7 col-1"></div>
+      <div class="grid-cell note row-7 col-2"></div>
+      <div class="grid-cell note row-7 col-3"></div>
+      <div class="grid-cell note row-7 col-4"></div>
+      <div class="grid-cell note row-7 col-5"></div>
+      <div class="grid-cell note row-7 col-6"></div>
+      <div class="grid-cell note row-7 col-7"></div>
+      <div class="grid-cell note row-7 col-8"></div>
+      <div class="grid-cell note row-7 col-9"></div>
+      <div class="grid-cell note row-7 col-10"></div>
+      <div class="grid-cell note row-7 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re7"></div>
+      <!-- Row 9 -->
+      <div class="grid-cell-btn p-label" id="pr8"></div>
+      <div class="grid-cell note row-8 col-0"></div>
+      <div class="grid-cell note row-8 col-1"></div>
+      <div class="grid-cell note row-8 col-2"></div>
+      <div class="grid-cell note row-8 col-3"></div>
+      <div class="grid-cell note row-8 col-4"></div>
+      <div class="grid-cell note row-8 col-5"></div>
+      <div class="grid-cell note row-8 col-6"></div>
+      <div class="grid-cell note row-8 col-7"></div>
+      <div class="grid-cell note row-8 col-8"></div>
+      <div class="grid-cell note row-8 col-9"></div>
+      <div class="grid-cell note row-8 col-10"></div>
+      <div class="grid-cell note row-8 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re8"></div>
+      <!-- Row 10 -->
+      <div class="grid-cell-btn p-label" id="pr9"></div>
+      <div class="grid-cell note row-9 col-0"></div>
+      <div class="grid-cell note row-9 col-1"></div>
+      <div class="grid-cell note row-9 col-2"></div>
+      <div class="grid-cell note row-9 col-3"></div>
+      <div class="grid-cell note row-9 col-4"></div>
+      <div class="grid-cell note row-9 col-5"></div>
+      <div class="grid-cell note row-9 col-6"></div>
+      <div class="grid-cell note row-9 col-7"></div>
+      <div class="grid-cell note row-9 col-8"></div>
+      <div class="grid-cell note row-9 col-9"></div>
+      <div class="grid-cell note row-9 col-10"></div>
+      <div class="grid-cell note row-9 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re9"></div>
+      <!-- Row 11 -->
+      <div class="grid-cell-btn p-label" id="pr10"></div>
+      <div class="grid-cell note row-10 col-0"></div>
+      <div class="grid-cell note row-10 col-1"></div>
+      <div class="grid-cell note row-10 col-2"></div>
+      <div class="grid-cell note row-10 col-3"></div>
+      <div class="grid-cell note row-10 col-4"></div>
+      <div class="grid-cell note row-10 col-5"></div>
+      <div class="grid-cell note row-10 col-6"></div>
+      <div class="grid-cell note row-10 col-7"></div>
+      <div class="grid-cell note row-10 col-8"></div>
+      <div class="grid-cell note row-10 col-9"></div>
+      <div class="grid-cell note row-10 col-10"></div>
+      <div class="grid-cell note row-10 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re10"></div>
+      <!-- Row 12 -->
+      <div class="grid-cell-btn p-label" id="pr11"></div>
+      <div class="grid-cell note row-11 col-0"></div>
+      <div class="grid-cell note row-11 col-1"></div>
+      <div class="grid-cell note row-11 col-2"></div>
+      <div class="grid-cell note row-11 col-3"></div>
+      <div class="grid-cell note row-11 col-4"></div>
+      <div class="grid-cell note row-11 col-5"></div>
+      <div class="grid-cell note row-11 col-6"></div>
+      <div class="grid-cell note row-11 col-7"></div>
+      <div class="grid-cell note row-11 col-8"></div>
+      <div class="grid-cell note row-11 col-9"></div>
+      <div class="grid-cell note row-11 col-10"></div>
+      <div class="grid-cell note row-11 col-11"></div>
+      <div class="grid-cell-btn r-label" id="re11"></div>
+      <!-- Row 13 -->
+      <div class="blank"></div>
+      <div class="grid-cell-btn ri-label" id="ri0"></div>
+      <div class="grid-cell-btn ri-label" id="ri1"></div>
+      <div class="grid-cell-btn ri-label" id="ri2"></div>
+      <div class="grid-cell-btn ri-label" id="ri3"></div>
+      <div class="grid-cell-btn ri-label" id="ri4"></div>
+      <div class="grid-cell-btn ri-label" id="ri5"></div>
+      <div class="grid-cell-btn ri-label" id="ri6"></div>
+      <div class="grid-cell-btn ri-label" id="ri7"></div>
+      <div class="grid-cell-btn ri-label" id="ri8"></div>
+      <div class="grid-cell-btn ri-label" id="ri9"></div>
+      <div class="grid-cell-btn ri-label" id="ri10"></div>
+      <div class="grid-cell-btn ri-label" id="ri11"></div>
+      <div class="blank"></div>
+    </div>
+    <script src="twelveToneMatrix.js"></script>
+  </body>
+</html>
